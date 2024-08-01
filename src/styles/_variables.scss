@@ -1,0 +1,68 @@
+// 1.颜色变量
+$primary-color: #007bff; //主要
+$secondary-color: #6c757d; //次要
+$accent-color: #ffc107; //强调
+
+// 2.字体变量
+$font-family-base: 'Arial', sans-serif;
+$font-family-heading: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5; //基础行高
+
+// 3.间距变量
+$spacing-base: 1rem;
+$spacing-sm: 0.5rem;
+$spacing-lg: 2rem;
+
+// 4.边框变量
+$border-width-base: 1px;
+$border-radius-base: 0.25rem;
+
+// 5.媒体查询变量
+// @media #{$media-queries['sm']} {
+//   padding: 5px;
+// }
+$media-queries: (
+  'sm': 'screen and (max-width: 575px)',
+  'md': 'screen and (min-width: 576px) and (max-width: 767px)',
+  'lg': 'screen and (min-width: 768px) and (max-width: 991px)',
+  'xl': 'screen and (min-width: 992px) and (max-width: 1199px)',
+  'xxl': 'screen and (min-width: 1200px)',
+);
+
+// 6.z-index 变量
+$z-index-header: 1000; //头部：导航栏等
+$z-index-modal: 2000; // 模态框
+
+// 7.阴影变量
+$box-shadow-base: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow-lg: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+// 8.过渡变量
+$transition-base: all 0.3s ease-in-out;
+$transition-fast: all 0.2s ease-in-out;
+$transition-slow: all 0.5s ease-in-out;
+
+// 9.动画变量
+$animation-duration: 0.3s;
+$animation-timing-function: ease-in-out;
+
+// 10.动态效果变量
+// 鼠标悬停效果
+$hover-effect-opacity: 0.8;
+$hover-effect-transition: opacity 0.3s ease-in-out;
+// 焦点效果
+$focus-effect-border: 2px solid $primary-color;
+$focus-effect-transition: border-color 0.3s ease-in-out;
+
+// 11.图标变量
+// 图标大小
+$icon-small-size: 16px;
+$icon-medium-size: 24px;
+$icon-large-size: 32px;
+// 图标颜色
+$icon-color: #333;
+$svg-icon-fill-color: currentColor; // 使用当前文本颜色作为填充颜色
+// background-image: url('path/to/your/svg-icon.svg');
+// fill: $svg-icon-fill-color; // 使用定义的变量作为填充颜色
