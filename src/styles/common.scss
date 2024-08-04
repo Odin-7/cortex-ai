@@ -1,1 +1,24 @@
-  
+// 金币跳动旋转
+.bounce-rotate-fade-in {
+  animation: bounce-rotate-animation 1.5s infinite;
+  @keyframes bounce-rotate-animation {
+    20% {
+      transform: translateY(-6px);
+    }
+    30% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-3px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(0) rotateY(0);
+    }
+    80% {
+      transform: translateY(0) rotateY(180deg);
+    }
+  }
+}

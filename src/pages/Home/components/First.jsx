@@ -7,11 +7,19 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/system';
+
+import LightVideo from '@/assets/video/light-video.mp4';
+import DarkVideo from '@/assets/video/dark-video.mp4';
+import LightVideoSource from '@/assets/images/light-video-source.png';
+import DarkVideoSource from '@/assets/images/dark-video-source.png';
 
 export default function First() {
+  const theme = useTheme();
+  const videoUrl = theme.palette.mode === 'light' ? LightVideo : DarkVideo;
   return (
     <Box
-      id="hero"
+      id="first-page"
       sx={(theme) => ({
         width: '100%',
         backgroundImage:
@@ -42,7 +50,7 @@ export default function First() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            Our latest&nbsp;
+            智脑&nbsp;
             <Typography
               component="span"
               variant="h1"
@@ -54,7 +62,7 @@ export default function First() {
                     : 'primary.light',
               }}
             >
-              products
+              CortexAI
             </Typography>
           </Typography>
           <Typography
@@ -62,9 +70,7 @@ export default function First() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality
-            solutions tailored to your needs. Elevate your experience with
-            top-tier features and services.
+            一句话，为您搞定一切。
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -73,7 +79,7 @@ export default function First() {
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
-            <TextField
+            {/* <TextField
               id="outlined-basic"
               hiddenLabel
               size="small"
@@ -84,9 +90,9 @@ export default function First() {
                 autoComplete: 'off',
                 'aria-label': 'Enter your email address',
               }}
-            />
+            /> */}
             <Button variant="contained" color="primary">
-              Start now
+              点击开启
             </Button>
           </Stack>
           <Typography
@@ -108,10 +114,11 @@ export default function First() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
+            overflow: 'hidden',
             backgroundImage:
               theme.palette.mode === 'light'
-                ? 'url("/static/images/templates/templates-images/hero-light.png")'
-                : 'url("/static/images/templates/templates-images/hero-dark.png")',
+                ? `url(${LightVideoSource})`
+                : `url(${DarkVideoSource})`,
             backgroundSize: 'cover',
             borderRadius: '10px',
             outline: '1px solid',
@@ -124,7 +131,32 @@ export default function First() {
                 ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
                 : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
           })}
-        />
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          >
+            <source src={videoUrl} type="video/mp4" />
+          </video>
+          {/* <video
+            autoPlay
+            loop
+            muted
+            poster={
+              theme.palette.mode === 'light'
+                ? LightVideoSource
+                : DarkVideoSource
+            }
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          >
+            <source
+              src={theme.palette.mode === 'light' ? LightVideo : DarkVideo}
+              type="video/mp4"
+            />
+          </video> */}
+        </Box>
       </Container>
     </Box>
   );

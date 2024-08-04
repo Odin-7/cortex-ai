@@ -13,12 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ToggleColorMode from './ToggleColorMode';
 
 const logoStyle = {
-  width: '30px',
-  height: 'auto',
+  height: '25px',
+  with: 'auto',
   cursor: 'pointer',
+  padding: '0 10px',
 };
 
-function AppAppBar({ mode, toggleColorMode }) {
+function HeaderBar({ mode, toggleColorMode }) {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -43,12 +44,21 @@ function AppAppBar({ mode, toggleColorMode }) {
     <div>
       <AppBar
         position="fixed"
-        sx={{
+        sx={(theme) => ({
           boxShadow: 0,
           bgcolor: 'transparent',
           backgroundImage: 'none',
-          mt: 2,
-        }}
+          pt: 1,
+          // bgcolor:
+          //   theme.palette.mode === 'light'
+          //     ? 'rgba(255, 255, 255, 0.4)'
+          //     : 'rgba(0, 0, 0, 0.4)',
+          backdropFilter: 'blur(24px)',
+          // boxShadow:
+          //   theme.palette.mode === 'light'
+          //     ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
+          //     : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
+        })}
       >
         <Container maxWidth="lg">
           <Toolbar
@@ -58,19 +68,7 @@ function AppAppBar({ mode, toggleColorMode }) {
               alignItems: 'center',
               justifyContent: 'space-between',
               flexShrink: 0,
-              borderRadius: '999px',
-              bgcolor:
-                theme.palette.mode === 'light'
-                  ? 'rgba(255, 255, 255, 0.4)'
-                  : 'rgba(0, 0, 0, 0.4)',
-              backdropFilter: 'blur(24px)',
               maxHeight: 40,
-              border: '1px solid',
-              borderColor: 'divider',
-              boxShadow:
-                theme.palette.mode === 'light'
-                  ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
-                  : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
             })}
           >
             <Box
@@ -81,8 +79,20 @@ function AppAppBar({ mode, toggleColorMode }) {
                 ml: '-18px',
                 px: 0,
               }}
+              onClick={() => scrollToSection('first-page')}
             >
-              <img src="/logo.svg" style={logoStyle} alt="logo of sitemark" />
+              <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
+              <Typography variant="subtitle2" color="text.primary">
+                Cortex
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'flex' },
+                gap: 0.5,
+                alignItems: 'center',
+              }}
+            >
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
@@ -125,16 +135,8 @@ function AppAppBar({ mode, toggleColorMode }) {
                   </Typography>
                 </MenuItem>
               </Box>
-            </Box>
-            <Box
-              sx={{
-                display: { xs: 'none', md: 'flex' },
-                gap: 0.5,
-                alignItems: 'center',
-              }}
-            >
-              <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
-              <Button
+              {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
+              {/* <Button
                 color="primary"
                 variant="text"
                 size="small"
@@ -142,7 +144,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                 href="/material-ui/getting-started/templates/sign-in/"
                 target="_blank"
               >
-                Sign in
+                登录
               </Button>
               <Button
                 color="primary"
@@ -152,9 +154,10 @@ function AppAppBar({ mode, toggleColorMode }) {
                 href="/material-ui/getting-started/templates/sign-up/"
                 target="_blank"
               >
-                Sign up
-              </Button>
+                注册
+              </Button> */}
             </Box>
+            {/* 移动端 */}
             <Box sx={{ display: { sm: '', md: 'none' } }}>
               <Button
                 variant="text"
@@ -174,7 +177,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                     flexGrow: 1,
                   }}
                 >
-                  <Box
+                  {/* <Box
                     sx={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -186,7 +189,7 @@ function AppAppBar({ mode, toggleColorMode }) {
                       mode={mode}
                       toggleColorMode={toggleColorMode}
                     />
-                  </Box>
+                  </Box> */}
                   <MenuItem onClick={() => scrollToSection('features')}>
                     Features
                   </MenuItem>
@@ -237,4 +240,4 @@ function AppAppBar({ mode, toggleColorMode }) {
   );
 }
 
-export default AppAppBar;
+export default HeaderBar;

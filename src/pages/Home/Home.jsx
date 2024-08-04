@@ -9,6 +9,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 
 import HeaderBar from './components/HeaderBar';
+import FooterBar from './components/FooterBar';
 import First from './components/First';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
@@ -62,10 +63,16 @@ const Home = () => {
           <Divider />
           <Footer />
         </Box>
-        <ToggleCustomTheme
+        <FooterBar
+          mode={mode}
+          toggleColorMode={toggleColorMode}
           showCustomTheme={showCustomTheme}
           toggleCustomTheme={toggleCustomTheme}
         />
+        {/* <ToggleCustomTheme
+          showCustomTheme={showCustomTheme}
+          toggleCustomTheme={toggleCustomTheme}
+        /> */}
       </ThemeProvider>
     </div>
   );
