@@ -9,19 +9,27 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/system';
 
-import LightVideo from '@/assets/video/light-video.mp4';
-import DarkVideo from '@/assets/video/dark-video.mp4';
-import LightVideoSource from '@/assets/images/light-video-source.png';
-import DarkVideoSource from '@/assets/images/dark-video-source.png';
+// import GptLight from '@/assets/images/gpt-icon-light.svg';
+import GptDark from '@/assets/images/chatgpt.svg';
+import Claude from '@/assets/images/claude.svg';
+import Gemini from '@/assets/images/gemini.svg';
+import Wenxin from '@/assets/images/wenxin.svg';
+import Tongyi from '@/assets/images/tongyi.svg';
 
+const iconStyle = {
+  height: '20px',
+  with: 'auto',
+  cursor: 'pointer',
+  paddingLeft: '4px',
+  paddingRight: '4px',
+};
 export default function First() {
-  const theme = useTheme();
-  const videoUrl = theme.palette.mode === 'light' ? LightVideo : DarkVideo;
   return (
     <Box
       id="first-page"
       sx={(theme) => ({
         width: '100%',
+        height: '100vh',
         backgroundImage:
           theme.palette.mode === 'light'
             ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
@@ -39,7 +47,13 @@ export default function First() {
           pb: { xs: 8, sm: 12 },
         }}
       >
-        <Stack spacing={2} useFlexGap sx={{ width: { xs: '100%', sm: '70%' } }}>
+        <Stack
+          spacing={2}
+          useFlexGap
+          sx={{
+            width: { xs: '100%', sm: '70%' },
+          }}
+        >
           <Typography
             variant="h1"
             sx={{
@@ -72,91 +86,42 @@ export default function First() {
           >
             一句话，为您搞定一切。
           </Typography>
-          <Stack
+          {/* <Stack
             direction={{ xs: 'column', sm: 'row' }}
             alignSelf="center"
             spacing={1}
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
           >
-            {/* <TextField
-              id="outlined-basic"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              inputProps={{
-                autoComplete: 'off',
-                'aria-label': 'Enter your email address',
-              }}
-            /> */}
             <Button variant="contained" color="primary">
               点击开启
             </Button>
-          </Stack>
+          </Stack> */}
           <Typography
             variant="caption"
             textAlign="center"
-            sx={{ opacity: 0.8 }}
+            sx={{
+              // opacity: 0.8,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '0',
+              lineHeight: '2rem',
+            }}
           >
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
+            轻松访问
+            <img src={GptDark} style={iconStyle} alt="chatgpt" /> GPT-4o、
+            <img src={Gemini} style={iconStyle} alt="gemini" /> Gemini 1.5、
+            <img src={Claude} style={iconStyle} alt="claude" /> Claude 3.5、
+            <img src={Wenxin} style={iconStyle} alt="wenxin" /> 文心一言、
+            <img src={Tongyi} style={iconStyle} alt="tongyi" /> 通义千问 等多个
+            AI 模型！
+            {/* <Link href="#" color="primary">
               Terms & Conditions
-            </Link>
-            .
+            </Link> */}
           </Typography>
         </Stack>
-        <Box
-          id="image"
-          sx={(theme) => ({
-            mt: { xs: 8, sm: 10 },
-            alignSelf: 'center',
-            height: { xs: 200, sm: 700 },
-            width: '100%',
-            overflow: 'hidden',
-            backgroundImage:
-              theme.palette.mode === 'light'
-                ? `url(${LightVideoSource})`
-                : `url(${DarkVideoSource})`,
-            backgroundSize: 'cover',
-            borderRadius: '10px',
-            outline: '1px solid',
-            outlineColor:
-              theme.palette.mode === 'light'
-                ? alpha('#BFCCD9', 0.5)
-                : alpha('#9CCCFC', 0.1),
-            boxShadow:
-              theme.palette.mode === 'light'
-                ? `0 0 12px 8px ${alpha('#9CCCFC', 0.2)}`
-                : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
-          })}
-        >
-          <video
-            autoPlay
-            loop
-            muted
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          >
-            <source src={videoUrl} type="video/mp4" />
-          </video>
-          {/* <video
-            autoPlay
-            loop
-            muted
-            poster={
-              theme.palette.mode === 'light'
-                ? LightVideoSource
-                : DarkVideoSource
-            }
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          >
-            <source
-              src={theme.palette.mode === 'light' ? LightVideo : DarkVideo}
-              type="video/mp4"
-            />
-          </video> */}
-        </Box>
       </Container>
     </Box>
   );

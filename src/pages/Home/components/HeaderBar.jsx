@@ -99,7 +99,16 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Features
+                    介绍
+                  </Typography>
+                </MenuItem>
+
+                <MenuItem
+                  onClick={() => scrollToSection('highlights')}
+                  sx={{ py: '6px', px: '12px' }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    功能
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -107,15 +116,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Testimonials
-                  </Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection('highlights')}
-                  sx={{ py: '6px', px: '12px' }}
-                >
-                  <Typography variant="body2" color="text.primary">
-                    Highlights
+                    评价
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -123,7 +124,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Pricing
+                    开通
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -131,7 +132,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    FAQ
+                    了解
                   </Typography>
                 </MenuItem>
               </Box>
@@ -191,19 +192,19 @@ function HeaderBar({ mode, toggleColorMode }) {
                     />
                   </Box> */}
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                    介绍
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
+                    评价
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
+                    功能
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
+                    开通
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('faq')}>
-                    FAQ
+                    了解
                   </MenuItem>
                   <Divider />
                   <MenuItem>

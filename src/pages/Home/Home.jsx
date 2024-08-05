@@ -11,6 +11,7 @@ import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import HeaderBar from './components/HeaderBar';
 import FooterBar from './components/FooterBar';
 import First from './components/First';
+import Second from './components/Second';
 import LogoCollection from './components/LogoCollection';
 import Highlights from './components/Highlights';
 import Pricing from './components/Pricing';
@@ -21,6 +22,7 @@ import Footer from './components/Footer';
 
 import getLPTheme from '@/theme/getLPTheme';
 import ToggleCustomTheme from './components/ToggleCustomTheme';
+import './Home.scss';
 
 // ToggleCustomTheme.propTypes = {
 //   showCustomTheme: PropTypes.shape({
@@ -50,12 +52,17 @@ const Home = () => {
         <HeaderBar mode={mode} toggleColorMode={toggleColorMode} />
         <First />
         <Box sx={{ bgcolor: 'background.default' }}>
+          <Divider className="home-divider" />
+          <Second />
+          <Divider />
           <LogoCollection />
-          <Features />
+          {/* <Features /> */}
+          <Divider />
+
+          <Highlights />
           <Divider />
           <Testimonials />
-          <Divider />
-          <Highlights />
+
           <Divider />
           <Pricing />
           <Divider />

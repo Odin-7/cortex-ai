@@ -1,5 +1,48 @@
 .home-page {
-  // styles for the entire home page component
+  #logoCollection {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      width: 10rem;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        rgba(85, 166, 246, 0.4),
+        transparent
+      );
+      position: absolute;
+      animation: line-translate-animation 10s ease-in-out infinite 10s both;
+    }
+    &::before {
+      top: -1px;
+    }
+    &::after {
+      bottom: -1px;
+    }
+    @keyframes line-translate-animation {
+      0%,
+      100% {
+        left: 0;
+        opacity: 0;
+      }
+      50% {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+      10%,
+      40%,
+      60%,
+      90% {
+        opacity: 0;
+      }
+      25%,
+      75% {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .home-page__header {

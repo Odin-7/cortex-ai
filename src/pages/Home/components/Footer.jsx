@@ -8,9 +8,11 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 
-import FacebookIcon from '@mui/icons-material/GitHub';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
+
+import ContactUs from '@/assets/images/contact-us.jpg';
 
 const logoStyle = {
   height: '60px',
@@ -37,6 +39,7 @@ export default function Footer() {
         alignItems: 'center',
         gap: { xs: 4, sm: 8 },
         py: { xs: 8, sm: 10 },
+        pb: { xs: 12, sm: 14 },
         textAlign: { sm: 'center', md: 'left' },
       }}
     >
@@ -53,7 +56,7 @@ export default function Footer() {
             display: 'flex',
             flexDirection: 'column',
             gap: 4,
-            minWidth: { xs: '100%', sm: '60%' },
+            minWidth: { xs: '100%', sm: '50%' },
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
@@ -61,32 +64,18 @@ export default function Footer() {
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
+              Cortex 智脑
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
+              一句话搞定一切，你的全能 AI 助手。
             </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                inputProps={{
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ flexShrink: 0 }}
-              >
-                Subscribe
-              </Button>
+            <Stack
+              direction="row"
+              spacing={1}
+              useFlexGap
+              sx={{ width: '100px' }}
+            >
+              <img src={ContactUs} alt="联系我们" style={{ width: '100%' }} />
             </Stack>
           </Box>
         </Box>
@@ -94,66 +83,96 @@ export default function Footer() {
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
-            gap: 1,
+            gap: 1.5,
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Product
+            产品
           </Typography>
           <Link color="text.secondary" href="#">
-            Features
+            介绍
+          </Link>
+
+          <Link color="text.secondary" href="#">
+            功能
           </Link>
           <Link color="text.secondary" href="#">
-            Testimonials
+            大家的评价
           </Link>
           <Link color="text.secondary" href="#">
-            Highlights
+            开通会员
           </Link>
           <Link color="text.secondary" href="#">
-            Pricing
-          </Link>
-          <Link color="text.secondary" href="#">
-            FAQs
+            你想了解的
           </Link>
         </Box>
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
-            gap: 1,
+            gap: 1.5,
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Company
+            特色功能
           </Typography>
           <Link color="text.secondary" href="#">
-            About us
+            AI 图像编辑器
           </Link>
           <Link color="text.secondary" href="#">
-            Careers
+            AI 文字转语音
           </Link>
           <Link color="text.secondary" href="#">
-            Press
+            AI 图片批量下载
+          </Link>
+          <Link color="text.secondary" href="#">
+            AI 翻译器
+          </Link>
+          <Link color="text.secondary" href="#">
+            重写文本
           </Link>
         </Box>
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
-            gap: 1,
+            gap: 1.5,
           }}
         >
           <Typography variant="body2" fontWeight={600}>
-            Legal
+            关于
           </Typography>
           <Link color="text.secondary" href="#">
-            Terms
+            关于我们
           </Link>
           <Link color="text.secondary" href="#">
-            Privacy
+            加入我们
           </Link>
           <Link color="text.secondary" href="#">
-            Contact
+            谷歌插件扩展
+          </Link>
+          <Link color="text.secondary" href="#">
+            VSCode插件扩展
+          </Link>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: 'none', sm: 'flex' },
+            flexDirection: 'column',
+            gap: 1.5,
+          }}
+        >
+          <Typography variant="body2" fontWeight={600}>
+            了解更多
+          </Typography>
+          <Link color="text.secondary" href="#">
+            文档
+          </Link>
+          <Link color="text.secondary" href="#">
+            隐私条款
+          </Link>
+          <Link color="text.secondary" href="#">
+            MagicRepoKit
           </Link>
         </Box>
       </Box>
@@ -168,7 +187,7 @@ export default function Footer() {
         }}
       >
         <div>
-          <Link color="text.secondary" href="#">
+          {/* <Link color="text.secondary" href="#">
             Privacy Policy
           </Link>
           <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
@@ -176,7 +195,7 @@ export default function Footer() {
           </Typography>
           <Link color="text.secondary" href="#">
             Terms of Service
-          </Link>
+          </Link> */}
           <Copyright />
         </div>
         <Stack
@@ -190,27 +209,21 @@ export default function Footer() {
         >
           <IconButton
             color="inherit"
-            href="https://github.com/mui"
+            href="https://github.com/Odin-7/cortex-ai"
+            target="_blank"
             aria-label="GitHub"
             sx={{ alignSelf: 'center' }}
           >
-            <FacebookIcon />
+            <GitHubIcon />
           </IconButton>
           <IconButton
             color="inherit"
-            href="https://x.com/MaterialUI"
+            href="https://github.com/Odin-7/cortex-ai"
+            target="_blank"
             aria-label="X"
             sx={{ alignSelf: 'center' }}
           >
             <TwitterIcon />
-          </IconButton>
-          <IconButton
-            color="inherit"
-            href="https://www.linkedin.com/company/mui/"
-            aria-label="LinkedIn"
-            sx={{ alignSelf: 'center' }}
-          >
-            <LinkedInIcon />
           </IconButton>
         </Stack>
       </Box>

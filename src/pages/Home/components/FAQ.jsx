@@ -38,7 +38,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Frequently asked questions
+        你想了解的
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
@@ -51,7 +51,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              Cortex 主要有什么功能?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -60,10 +60,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              可以用来智能对话、创作、阅读、写作、自动生成代码，写周报、快速翻译、快速总结，提高你的工作效率，此外也可以用来聊天，娱乐等等。
+              <Link> 点这里快速体验 </Link>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -77,7 +75,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              支持哪些大模型?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -86,9 +84,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re
-              not completely satisfied, you can return the product within
-              [number of days] days for a full refund or exchange.
+              通过Cortex，轻松访问GPT-3、GPT-4o、Gemini、Claude、文心一言、通义千问、星火认知等多个AI模型。
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -102,7 +98,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              Cortex 是免费的吗
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -111,10 +107,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability,
-              durability, and innovative features. We prioritize user
-              satisfaction and continually strive to exceed expectations in
-              every aspect.
+              您可以免费使用Cortex，我们提供免费功能和付费功能，可以通过每日登录获取金币，金币可以用来抵扣付费功能的使用。
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -128,7 +121,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              谷歌浏览器插件在哪里下载?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -137,10 +130,8 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It
-              covers defects in materials and workmanship. If you encounter any
-              issues covered by the warranty, please contact our customer
-              support for assistance.
+              Cortex
+              提供了一整套的AI插件，常驻在浏览器侧边栏，目前功能还在开发中，敬请期待。
             </Typography>
           </AccordionDetails>
         </Accordion>

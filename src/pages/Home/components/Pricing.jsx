@@ -11,10 +11,17 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+
+import Chatgpt from '@/assets/images/chatgpt.svg';
+import Claude from '@/assets/images/claude.svg';
+import Gemini from '@/assets/images/gemini.svg';
 
 const tiers = [
   {
     title: 'Free',
+    subTitle: '免费',
     price: '0',
     description: [
       '10 users included',
@@ -22,12 +29,13 @@ const tiers = [
       'Help center access',
       'Email support',
     ],
-    buttonText: 'Sign up for free',
+    buttonText: '免费注册',
     buttonVariant: 'outlined',
   },
   {
     title: 'Professional',
-    subheader: 'Recommended',
+    subTitle: 'VIP',
+    subheader: '推荐',
     price: '15',
     description: [
       '20 users included',
@@ -37,11 +45,12 @@ const tiers = [
       'Dedicated team',
       'Best deals',
     ],
-    buttonText: 'Start now',
+    buttonText: '开通会员',
     buttonVariant: 'contained',
   },
   {
     title: 'Enterprise',
+    subTitle: 'SVIP',
     price: '30',
     description: [
       '50 users included',
@@ -49,12 +58,24 @@ const tiers = [
       'Help center access',
       'Phone & email support',
     ],
-    buttonText: 'Contact us',
+    buttonText: '高级会员',
     buttonVariant: 'outlined',
   },
 ];
 
+const logoStyle = {
+  height: '25px',
+  with: 'auto',
+  cursor: 'pointer',
+  padding: '0 5px',
+};
+
 export default function Pricing() {
+  const [alignment, setAlignment] = React.useState('web');
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
   return (
     <Container
       id="pricing"
@@ -65,23 +86,98 @@ export default function Pricing() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: { xs: 3, sm: 6 },
+        gap: { xs: 3, sm: 5 },
       }}
     >
       <Box
         sx={{
-          width: { sm: '100%', md: '60%' },
-          textAlign: { sm: 'left', md: 'center' },
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          width: '100%',
         }}
       >
-        <Typography component="h2" variant="h4" color="text.primary">
-          Pricing
+        <Typography
+          component="h2"
+          variant="h4"
+          color="text.primary"
+          sx={{
+            width: { sm: '100%', md: '60%' },
+            textAlign: { xs: 'center', sm: 'center', md: 'center' },
+          }}
+        >
+          开通
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers
-          with this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+        <Typography
+          component="h2"
+          variant="h5"
+          color="text.primary"
+          sx={{
+            mt: { xs: 2, sm: 2 },
+            display: 'flex',
+            alignItems: 'center',
+            gap: { xs: 3, sm: 2 },
+            justifyContent: 'center',
+          }}
+        >
+          支持
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <img src={Chatgpt} style={logoStyle} alt="chatgpt" />
+            <Typography
+              variant="h5"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+              }}
+            >
+              GPT-4o
+            </Typography>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <img src={Claude} style={logoStyle} alt="claude" />
+
+            <Typography
+              variant="h5"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+              }}
+            >
+              Claude 3.5
+            </Typography>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <img src={Gemini} style={logoStyle} alt="gemini" />
+
+            <Typography
+              variant="h5"
+              sx={{
+                display: { xs: 'none', sm: 'block' },
+              }}
+            >
+              Gemini 1.5
+            </Typography>
+          </div>
+        </Typography>
+        <ToggleButtonGroup
+          sx={{
+            mt: { xs: 3, sm: 3 },
+          }}
+          color="primary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          aria-label="Platform"
+        >
+          <ToggleButton value="web">每年（节省80%）</ToggleButton>
+          <ToggleButton value="android">每月</ToggleButton>
+        </ToggleButtonGroup>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{
+            mt: { xs: 2, sm: 2 },
+          }}
+        >
+          成为我们的会员，为您提供更高级的功能
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -119,7 +215,7 @@ export default function Pricing() {
                   }}
                 >
                   <Typography component="h3" variant="h6">
-                    {tier.title}
+                    {tier.subTitle}
                   </Typography>
                   {tier.title === 'Professional' && (
                     <Chip
@@ -149,10 +245,10 @@ export default function Pricing() {
                   }}
                 >
                   <Typography component="h3" variant="h2">
-                    ${tier.price}
+                    {tier.price}
                   </Typography>
                   <Typography component="h3" variant="h6">
-                    &nbsp; per month
+                    &nbsp; 元/月
                   </Typography>
                 </Box>
                 <Divider

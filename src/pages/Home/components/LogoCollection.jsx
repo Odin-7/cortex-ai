@@ -35,14 +35,14 @@ export default function LogoCollection() {
 
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
-      <Typography
+      {/* <Typography
         component="p"
         variant="subtitle2"
         align="center"
         color="text.secondary"
       >
         Trusted by the best companies
-      </Typography>
+      </Typography> */}
       <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
         {logos.map((logo, index) => (
           <Grid item key={index}>
