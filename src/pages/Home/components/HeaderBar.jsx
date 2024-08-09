@@ -83,7 +83,7 @@ function HeaderBar({ mode, toggleColorMode }) {
             >
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
               <Typography variant="subtitle2" color="text.primary">
-                Cortex
+                Cortex AI
               </Typography>
             </Box>
             <Box
@@ -207,7 +207,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                     了解
                   </MenuItem>
                   <Divider />
-                  <MenuItem>
+                  {/* <MenuItem>
                     <Button
                       color="primary"
                       variant="contained"
@@ -218,17 +218,16 @@ function HeaderBar({ mode, toggleColorMode }) {
                     >
                       Sign up
                     </Button>
-                  </MenuItem>
+                  </MenuItem> */}
                   <MenuItem>
                     <Button
                       color="primary"
                       variant="outlined"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
                       target="_blank"
                       sx={{ width: '100%' }}
                     >
-                      Sign in
+                      登 录
                     </Button>
                   </MenuItem>
                 </Box>

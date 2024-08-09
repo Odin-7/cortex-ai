@@ -48,7 +48,7 @@ export default function First() {
         }}
       >
         <Stack
-          spacing={2}
+          spacing={1}
           useFlexGap
           sx={{
             width: { xs: '100%', sm: '70%' },
@@ -64,19 +64,22 @@ export default function First() {
               fontSize: 'clamp(3.5rem, 10vw, 4rem)',
             }}
           >
-            智脑&nbsp;
+            {/* 智脑&nbsp; */}
             <Typography
               component="span"
               variant="h1"
+              className="first-page-mask"
               sx={{
                 fontSize: 'clamp(3rem, 10vw, 4rem)',
                 color: (theme) =>
                   theme.palette.mode === 'light'
                     ? 'primary.main'
                     : 'primary.light',
+                height: { xs: '150px', sm: '200px' },
               }}
             >
               CortexAI
+              {/* <div className="first-page-mask"></div> */}
             </Typography>
           </Typography>
           <Typography
@@ -97,7 +100,7 @@ export default function First() {
               点击开启
             </Button>
           </Stack> */}
-          <Typography
+          {/* <Typography
             variant="caption"
             textAlign="center"
             sx={{
@@ -117,10 +120,7 @@ export default function First() {
             <img src={Wenxin} style={iconStyle} alt="wenxin" /> 文心一言、
             <img src={Tongyi} style={iconStyle} alt="tongyi" /> 通义千问 等多个
             AI 模型！
-            {/* <Link href="#" color="primary">
-              Terms & Conditions
-            </Link> */}
-          </Typography>
+          </Typography> */}
         </Stack>
       </Container>
     </Box>

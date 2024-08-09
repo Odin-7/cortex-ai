@@ -56,8 +56,8 @@ export default function Highlights() {
       sx={{
         pt: { xs: 4, sm: 12 },
         pb: { xs: 8, sm: 16 },
-        color: 'white',
-        bgcolor: '#06090a',
+        // color: 'white',
+        // bgcolor: '#06090a',
       }}
     >
       <Container
@@ -94,10 +94,10 @@ export default function Highlights() {
                 sx={{
                   p: 3,
                   height: '100%',
-                  border: '1px solid',
-                  borderColor: 'grey.800',
-                  background: 'transparent',
-                  backgroundColor: 'grey.900',
+                  // border: '1px solid',
+                  // borderColor: 'grey.800',
+                  // background: 'transparent',
+                  // backgroundColor: 'grey.900',
                 }}
               >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>

@@ -43,12 +43,35 @@
       }
     }
   }
-}
 
-.home-page__header {
-  // styles for the header within the home page component
-}
+  #first-page {
+    .first-page-mask {
+      // background-image: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+      // background-image: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
+      background-image: url(https://assets.codepen.io/285131/paintbg.jpg);
+      background-size: cover;
+      // background: linear-gradient(
+      //   70deg,
+      //   rgb(10, 3, 15) 0%,
+      //   rgb(64, 69, 149) 25%,
+      //   rgb(10, 3, 15) 50%,
+      //   rgb(64, 69, 149) 75%,
+      //   rgb(10, 3, 15) 100%
+      // );
 
-.home-page__content {
-  // styles for the content section within the home page component
+      // background-size: 300% 200%;
+      // mask: url(http://www2.djicdn.com/assets/images/v3/logo-black2-145dcb13c56f36a65d084180a42136fa.svg);
+      mask: url(../../assets/images/logo-name.svg#star);
+      mask-size: cover;
+      animation: move 10s infinite;
+      @keyframes move {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 100% 33%;
+        }
+      }
+    }
+  }
 }

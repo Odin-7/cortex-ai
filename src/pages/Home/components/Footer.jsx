@@ -64,10 +64,10 @@ export default function Footer() {
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
-              Cortex 智脑
+              Cortex AI
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              一句话搞定一切，你的全能 AI 助手。
+              Hi，我是你的全能 AI 助手。
             </Typography>
             <Stack
               direction="row"
