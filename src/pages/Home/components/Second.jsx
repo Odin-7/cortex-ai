@@ -31,6 +31,7 @@ export default function First() {
       id="features"
       sx={(theme) => ({
         width: '100%',
+        backgroundColor: '#0a0a0a',
         // backgroundImage:
         //   theme.palette.mode === 'light'
         //     ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
@@ -44,8 +45,8 @@ export default function First() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          pt: { xs: 4, sm: 12 },
-          pb: { xs: 8, sm: 16 },
+          pt: { xs: 3, sm: 5 },
+          pb: { xs: 8, sm: 10 },
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">

@@ -8,6 +8,7 @@ import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/system';
+import SearchComponent from './SearchComponent';
 
 // import GptLight from '@/assets/images/gpt-icon-light.svg';
 import GptDark from '@/assets/images/chatgpt.svg';
@@ -29,12 +30,12 @@ export default function First() {
       id="first-page"
       sx={(theme) => ({
         width: '100%',
-        height: '100vh',
+        height: '80vh',
         backgroundImage:
           theme.palette.mode === 'light'
             ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
             : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
-        backgroundSize: '100% 20%',
+        backgroundSize: '100% 33%',
         backgroundRepeat: 'no-repeat',
       })}
     >
@@ -48,7 +49,7 @@ export default function First() {
         }}
       >
         <Stack
-          spacing={1}
+          spacing={0}
           useFlexGap
           sx={{
             width: { xs: '100%', sm: '70%' },
@@ -75,31 +76,45 @@ export default function First() {
                   theme.palette.mode === 'light'
                     ? 'primary.main'
                     : 'primary.light',
-                height: { xs: '150px', sm: '200px' },
+                height: { xs: '8rem', sm: '10rem' },
               }}
             >
-              CortexAI
-              {/* <div className="first-page-mask"></div> */}
+              {/* CortexAI */}
             </Typography>
           </Typography>
           <Typography
+            component="h2"
+            variant="h5"
+            color="text.primary"
+            sx={{
+              textAlign: 'center',
+            }}
+          >
+            一句话，为您搞定一切。
+          </Typography>
+          {/* <Typography
             textAlign="center"
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
             一句话，为您搞定一切。
-          </Typography>
-          {/* <Stack
+          </Typography> */}
+          <Stack
             direction={{ xs: 'column', sm: 'row' }}
             alignSelf="center"
             spacing={1}
             useFlexGap
-            sx={{ pt: 2, width: { xs: '100%', sm: 'auto' } }}
+            sx={{
+              pt: 5,
+              width: { xs: '90%', sm: 'auto' },
+              textAlign: 'center',
+            }}
           >
-            <Button variant="contained" color="primary">
+            {/* <Button variant="contained" color="primary">
               点击开启
-            </Button>
-          </Stack> */}
+            </Button> */}
+            <SearchComponent />
+          </Stack>
           {/* <Typography
             variant="caption"
             textAlign="center"
@@ -123,6 +138,12 @@ export default function First() {
           </Typography> */}
         </Stack>
       </Container>
+      <div className="first-page-star-ring"></div>
+      <div className="first-page-star-ring-circle"></div>
+      <div className="first-page-star-mark">
+        <div className="left"></div>
+        <div className="right"></div>
+      </div>
     </Box>
   );
 }

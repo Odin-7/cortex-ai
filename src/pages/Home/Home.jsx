@@ -52,30 +52,29 @@ const Home = () => {
         <HeaderBar mode={mode} toggleColorMode={toggleColorMode} />
         <First />
         <Box sx={{ bgcolor: 'background.default' }}>
-          <Divider className="home-divider" />
+          {/* <Divider /> */}
           <Second />
-          <Divider />
+          {/* <Divider /> */}
           <LogoCollection />
           {/* <Features /> */}
-          <Divider />
+          {/* <Divider /> */}
 
           <Highlights />
-          <Divider />
+          {/* <Divider /> */}
           <Testimonials />
-
-          <Divider />
+          {/* <Divider /> */}
           <Pricing />
-          <Divider />
+          {/* <Divider /> */}
           <FAQ />
           <Divider />
           <Footer />
         </Box>
-        <FooterBar
+        {/* <FooterBar
           mode={mode}
           toggleColorMode={toggleColorMode}
           showCustomTheme={showCustomTheme}
           toggleCustomTheme={toggleCustomTheme}
-        />
+        /> */}
         {/* <ToggleCustomTheme
           showCustomTheme={showCustomTheme}
           toggleCustomTheme={toggleCustomTheme}

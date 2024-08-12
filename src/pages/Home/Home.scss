@@ -1,54 +1,58 @@
 .home-page {
   #logoCollection {
-    position: relative;
-    &::before,
-    &::after {
-      content: '';
-      width: 10rem;
-      height: 1px;
-      background-image: linear-gradient(
-        to right,
-        transparent,
-        rgba(85, 166, 246, 0.4),
-        transparent
-      );
-      position: absolute;
-      animation: line-translate-animation 10s ease-in-out infinite 10s both;
-    }
-    &::before {
-      top: -1px;
-    }
-    &::after {
-      bottom: -1px;
-    }
-    @keyframes line-translate-animation {
-      0%,
-      100% {
-        left: 0;
-        opacity: 0;
-      }
-      50% {
-        left: 100%;
-        transform: translateX(-100%);
-      }
-      10%,
-      40%,
-      60%,
-      90% {
-        opacity: 0;
-      }
-      25%,
-      75% {
-        opacity: 1;
-      }
-    }
+    // position: relative;
+    // &::before,
+    // &::after {
+    //   content: '';
+    //   width: 10rem;
+    //   height: 1px;
+    //   background-image: linear-gradient(
+    //     to right,
+    //     transparent,
+    //     rgba(85, 166, 246, 0.4),
+    //     transparent
+    //   );
+    //   position: absolute;
+    //   animation: line-translate-animation 10s ease-in-out infinite 10s both;
+    // }
+    // &::before {
+    //   top: -1px;
+    // }
+    // &::after {
+    //   bottom: -1px;
+    // }
+    // @keyframes line-translate-animation {
+    //   0%,
+    //   100% {
+    //     left: 0;
+    //     opacity: 0;
+    //   }
+    //   50% {
+    //     left: 100%;
+    //     transform: translateX(-100%);
+    //   }
+    //   10%,
+    //   40%,
+    //   60%,
+    //   90% {
+    //     opacity: 0;
+    //   }
+    //   25%,
+    //   75% {
+    //     opacity: 1;
+    //   }
+    // }
   }
 
   #first-page {
+    position: relative;
+    overflow: hidden;
     .first-page-mask {
-      // background-image: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
+      max-width: 250px;
+      width: 50vw;
+      background-image: url(https://sp-webfront.skypixel.com/skypixel/v2/public/website/assets/1535027674204-f6eca6369ec03e70262b58b0e25cda7b.jpg);
       // background-image: url(https://media.giphy.com/media/3o6Ztb45EYezY9x9gQ/giphy.gif);
-      background-image: url(https://assets.codepen.io/285131/paintbg.jpg);
+      // background-image: url(https://assets.codepen.io/285131/paintbg.jpg);
       background-size: cover;
       // background: linear-gradient(
       //   70deg,
@@ -62,7 +66,9 @@
       // background-size: 300% 200%;
       // mask: url(http://www2.djicdn.com/assets/images/v3/logo-black2-145dcb13c56f36a65d084180a42136fa.svg);
       mask: url(../../assets/images/logo-name.svg#star);
-      mask-size: cover;
+      mask-size: auto;
+      mask-repeat: no-repeat;
+      mask-position: center;
       animation: move 10s infinite;
       @keyframes move {
         0% {
@@ -70,6 +76,370 @@
         }
         50% {
           background-position: 100% 33%;
+        }
+      }
+    }
+    .first-page-star-ring {
+      // aspect-ratio: 2.346820809248555 / 1;
+      background-color: #0a0a0a;
+      border-radius: 100%;
+      bottom: -908px;
+      box-shadow: inset 0 2px 20px #fff, 0 -10px 50px 1px #ffffff7d;
+      height: 1058px;
+      position: absolute;
+      left: -521px;
+      right: -521px;
+      z-index: -10;
+    }
+    .first-page-star-ring-circle {
+      -webkit-filter: blur(57px);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(10, 10, 10, 0) 100%
+      );
+      bottom: 65px;
+      filter: blur(57px);
+      flex: none;
+      height: 120px;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      z-index: -20;
+    }
+    .first-page-star-mark {
+      display: flex;
+      flex: none;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0px;
+      justify-content: center;
+      inset: 0;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      z-index: -1;
+      .left {
+        background: linear-gradient(
+          90deg,
+          #0a0a0a 0%,
+          rgba(10, 10, 10, 0) 100%
+        );
+        flex: 1 0 0px;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 1px;
+      }
+      .right {
+        background: linear-gradient(
+          270deg,
+          #0a0a0a 0%,
+          rgba(10, 10, 10, 0) 100%
+        );
+        flex: 1 0 0px;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        width: 1px;
+      }
+    }
+    // 搜索
+    #first-page-search-container {
+      .stardust,
+      .cosmic-ring,
+      .starfield,
+      .nebula {
+        max-height: 70px;
+        max-width: 314px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+        border-radius: 12px;
+        filter: blur(3px);
+      }
+
+      .input {
+        background-color: #05071b;
+        border: none;
+        width: 301px;
+        height: 56px;
+        border-radius: 10px;
+        color: #a9c7ff;
+        padding-inline: 59px;
+        font-size: 18px;
+      }
+
+      & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .input::placeholder {
+        color: #6e8cff;
+      }
+
+      .input:focus {
+        outline: none;
+      }
+
+      #main:focus-within > #input-mask {
+        display: none;
+      }
+
+      #input-mask {
+        pointer-events: none;
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        background: linear-gradient(90deg, transparent, #05071b);
+        top: 18px;
+        left: 70px;
+      }
+
+      #cosmic-glow {
+        pointer-events: none;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        background: #4d6dff;
+        top: 10px;
+        left: 5px;
+        filter: blur(20px);
+        opacity: 0.8;
+        transition: all 2s;
+      }
+
+      #main:hover > #cosmic-glow {
+        opacity: 0;
+      }
+
+      .stardust {
+        max-height: 63px;
+        max-width: 307px;
+        border-radius: 10px;
+        filter: blur(2px);
+      }
+
+      .stardust::before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(83deg);
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        filter: brightness(1.4);
+        background-image: conic-gradient(
+          rgba(0, 0, 0, 0) 0%,
+          #4d6dff,
+          rgba(0, 0, 0, 0) 8%,
+          rgba(0, 0, 0, 0) 50%,
+          #6e8cff,
+          rgba(0, 0, 0, 0) 58%
+        );
+        transition: all 2s;
+      }
+
+      .cosmic-ring {
+        max-height: 59px;
+        max-width: 303px;
+        border-radius: 11px;
+        filter: blur(0.5px);
+      }
+
+      .cosmic-ring::before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(70deg);
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        filter: brightness(1.3);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(
+          #05071b,
+          #4d6dff 5%,
+          #05071b 14%,
+          #05071b 50%,
+          #6e8cff 60%,
+          #05071b 64%
+        );
+        transition: all 2s;
+      }
+
+      .starfield {
+        max-height: 65px;
+        max-width: 312px;
+      }
+
+      .starfield::before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(82deg);
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(
+          rgba(0, 0, 0, 0),
+          #1c2452,
+          rgba(0, 0, 0, 0) 10%,
+          rgba(0, 0, 0, 0) 50%,
+          #2a3875,
+          rgba(0, 0, 0, 0) 60%
+        );
+        transition: all 2s;
+      }
+
+      &:hover > .starfield::before {
+        transform: translate(-50%, -50%) rotate(-98deg);
+      }
+
+      &:hover > .nebula::before {
+        transform: translate(-50%, -50%) rotate(-120deg);
+      }
+
+      &:hover > .stardust::before {
+        transform: translate(-50%, -50%) rotate(-97deg);
+      }
+
+      &:hover > .cosmic-ring::before {
+        transform: translate(-50%, -50%) rotate(-110deg);
+      }
+
+      &:focus-within > .starfield::before {
+        transform: translate(-50%, -50%) rotate(442deg);
+        transition: all 4s;
+      }
+
+      &:focus-within > .nebula::before {
+        transform: translate(-50%, -50%) rotate(420deg);
+        transition: all 4s;
+      }
+
+      &:focus-within > .stardust::before {
+        transform: translate(-50%, -50%) rotate(443deg);
+        transition: all 4s;
+      }
+
+      &:focus-within > .cosmic-ring::before {
+        transform: translate(-50%, -50%) rotate(430deg);
+        transition: all 4s;
+      }
+
+      .nebula {
+        overflow: hidden;
+        filter: blur(30px);
+        opacity: 0.4;
+        max-height: 130px;
+        max-width: 354px;
+      }
+
+      .nebula:before {
+        content: '';
+        z-index: -2;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(60deg);
+        position: absolute;
+        width: 999px;
+        height: 999px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-image: conic-gradient(
+          #000,
+          #4d6dff 5%,
+          #000 38%,
+          #000 50%,
+          #6e8cff 60%,
+          #000 87%
+        );
+        transition: all 2s;
+      }
+
+      #wormhole-icon {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        max-height: 40px;
+        max-width: 38px;
+        height: 100%;
+        width: 100%;
+        isolation: isolate;
+        overflow: hidden;
+        border-radius: 10px;
+        background: linear-gradient(180deg, #1c2452, #05071b, #2a3875);
+        border: 1px solid transparent;
+      }
+
+      .wormhole-border {
+        height: 42px;
+        width: 40px;
+        position: absolute;
+        overflow: hidden;
+        top: 7px;
+        right: 7px;
+        border-radius: 10px;
+      }
+
+      .wormhole-border::before {
+        content: '';
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        filter: brightness(1.35);
+        background-image: conic-gradient(
+          rgba(0, 0, 0, 0),
+          #4d6dff,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0) 50%,
+          #6e8cff,
+          rgba(0, 0, 0, 0) 100%
+        );
+        animation: rotate 4s linear infinite;
+      }
+
+      #main {
+        position: relative;
+      }
+
+      #search-icon {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: translate(-50%, -50%) rotate(450deg);
         }
       }
     }
