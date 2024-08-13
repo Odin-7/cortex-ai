@@ -18,6 +18,7 @@ import Pricing from './components/Pricing';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import NowUse from './components/NowUse';
 import Footer from './components/Footer';
 
 import getLPTheme from '@/theme/getLPTheme';
@@ -54,18 +55,14 @@ const Home = () => {
         <Box sx={{ bgcolor: 'background.default' }}>
           {/* <Divider /> */}
           <Second />
-          {/* <Divider /> */}
+
           <LogoCollection />
           {/* <Features /> */}
-          {/* <Divider /> */}
-
           <Highlights />
-          {/* <Divider /> */}
           <Testimonials />
-          {/* <Divider /> */}
           <Pricing />
-          {/* <Divider /> */}
           <FAQ />
+          <NowUse />
           <Divider />
           <Footer />
         </Box>

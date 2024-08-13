@@ -56,7 +56,7 @@ export default function Footer() {
             display: 'flex',
             flexDirection: 'column',
             gap: 4,
-            minWidth: { xs: '100%', sm: '50%' },
+            minWidth: { xs: '100%', sm: '60%' },
           }}
         >
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
@@ -117,42 +117,16 @@ export default function Footer() {
             特色功能
           </Typography>
           <Link color="text.secondary" href="#">
-            AI 图像编辑器
+            AI 编码大师
           </Link>
           <Link color="text.secondary" href="#">
-            AI 文字转语音
+            智能语音助手
           </Link>
           <Link color="text.secondary" href="#">
-            AI 图片批量下载
+            AI 图像智能
           </Link>
           <Link color="text.secondary" href="#">
-            AI 翻译器
-          </Link>
-          <Link color="text.secondary" href="#">
-            重写文本
-          </Link>
-        </Box>
-        <Box
-          sx={{
-            display: { xs: 'none', sm: 'flex' },
-            flexDirection: 'column',
-            gap: 1.5,
-          }}
-        >
-          <Typography variant="body2" fontWeight={600}>
-            关于
-          </Typography>
-          <Link color="text.secondary" href="#">
-            关于我们
-          </Link>
-          <Link color="text.secondary" href="#">
-            加入我们
-          </Link>
-          <Link color="text.secondary" href="#">
-            谷歌插件扩展
-          </Link>
-          <Link color="text.secondary" href="#">
-            VSCode插件扩展
+            文件处理
           </Link>
         </Box>
         <Box
@@ -166,13 +140,13 @@ export default function Footer() {
             了解更多
           </Typography>
           <Link color="text.secondary" href="#">
-            文档
+            加入我们
+          </Link>
+          <Link color="text.secondary" href="#">
+            插件扩展
           </Link>
           <Link color="text.secondary" href="#">
             隐私条款
-          </Link>
-          <Link color="text.secondary" href="#">
-            MagicRepoKit
           </Link>
         </Box>
       </Box>

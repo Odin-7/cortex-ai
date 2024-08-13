@@ -49,7 +49,7 @@ npm run dev
 
 # 或者使用 yarn
 yarn dev
-访问 http://localhost:3000 查看应用。
+访问 http://localhost:5173 查看应用。
 
 贡献
 感谢您考虑为项目贡献代码！您可以通过以下方式参与：

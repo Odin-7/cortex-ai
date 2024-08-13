@@ -101,10 +101,10 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          看看用户为什么喜爱 Cortex
+          我们的用户对 Cortex 的评价
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          100+评价，200+用户，平均评分4.5
+        <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
+          200+评价，平均评分4.5
         </Typography>
       </Box>
       <Grid container spacing={2}>

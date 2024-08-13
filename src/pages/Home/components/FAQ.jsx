@@ -21,7 +21,7 @@ export default function FAQ() {
       id="faq"
       sx={{
         pt: { xs: 3, sm: 5 },
-        pb: { xs: 8, sm: 10 },
+        pb: { xs: 5, sm: 8 },
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -136,6 +136,20 @@ export default function FAQ() {
           </AccordionDetails>
         </Accordion>
       </Box>
+      {/* <div
+        style={{
+          aspectRatio: '1 / 1',
+          background:
+            'radial-gradient(50% 50% at 50% 50%, rgba(3, 51, 99, 0.5) 39.0625%, rgba(2, 31, 59, 0) 100%)',
+          width: '650px',
+          zIndex: 0,
+          position: 'absolute',
+          left: '-0',
+          top: '-102px',
+          borderRadius: '100%',
+          filter: 'blur(125px)',
+        }}
+      ></div> */}
     </Container>
   );
 }

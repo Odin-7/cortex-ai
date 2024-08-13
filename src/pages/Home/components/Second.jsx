@@ -17,10 +17,15 @@ import LightVideoSource from '@/assets/images/light-video-source.png';
 import DarkVideoSource from '@/assets/images/dark-video-source.png';
 
 export default function First() {
-  const [alignment, setAlignment] = React.useState('web');
+  const [alignment, setAlignment] = React.useState('chat');
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
+  };
+  const text = {
+    chat: '在一处即可与所有顶尖模型同时聊天。',
+    code: 'AI 编码，无需人类插手',
+    voice: 'Hi，我是你的语音助手',
   };
 
   const theme = useTheme();
@@ -50,7 +55,7 @@ export default function First() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          你的全能 AI 助手
+          全能 AI 助手
         </Typography>
 
         {/* <Typography
@@ -74,9 +79,9 @@ export default function First() {
           onChange={handleChange}
           aria-label="Platform"
         >
-          <ToggleButton value="web">AI助手</ToggleButton>
-          <ToggleButton value="android">AI翻译</ToggleButton>
-          <ToggleButton value="ios">AI图片</ToggleButton>
+          <ToggleButton value="chat">多模型群聊</ToggleButton>
+          <ToggleButton value="code">AI编码大师</ToggleButton>
+          <ToggleButton value="voice">智能语音助手</ToggleButton>
         </ToggleButtonGroup>
         <Typography
           variant="body1"
@@ -85,7 +90,8 @@ export default function First() {
             mt: { xs: 3, sm: 3 },
           }}
         >
-          在一处即可与所有顶尖模型聊天。
+          {/* 在一处即可与所有顶尖模型同时聊天。 */}
+          {text[alignment]}
         </Typography>
         <Box
           id="image"

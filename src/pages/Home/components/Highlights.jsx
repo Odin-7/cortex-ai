@@ -76,9 +76,9 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            随处可用 随时可用
+            随处可用，随时可用
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.400' }}>
+          <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
             你需要的功能，我们都有
           </Typography>
         </Box>
