@@ -77,13 +77,13 @@ const logoStyle = {
   opacity: 0.3,
 };
 
-export default function Testimonials() {
+export default function Four() {
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
   return (
     <Container
-      id="testimonials"
+      id="four"
       sx={{
         pt: { xs: 3, sm: 5 },
         pb: { xs: 8, sm: 10 },
@@ -101,7 +101,7 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          我们的用户对 Cortex 的评价
+          <span className="cortex-font">我们的用户对 Cortex 的评价</span>
         </Typography>
         <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
           200+评价，平均评分4.5

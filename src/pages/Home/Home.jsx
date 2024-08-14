@@ -13,10 +13,10 @@ import FooterBar from './components/FooterBar';
 import First from './components/First';
 import Second from './components/Second';
 import LogoCollection from './components/LogoCollection';
-import Highlights from './components/Highlights';
-import Pricing from './components/Pricing';
+import Three from './components/Three';
+import Four from './components/Four';
+import Five from './components/Five';
 import Features from './components/Features';
-import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import NowUse from './components/NowUse';
 import Footer from './components/Footer';
@@ -33,7 +33,7 @@ import './Home.scss';
 // };
 
 const Home = () => {
-  const [mode, setMode] = React.useState('dark');
+  const [mode, setMode] = React.useState('light');
   const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const LPtheme = createTheme(getLPTheme(mode));
   const defaultTheme = createTheme({ palette: { mode } });
@@ -51,16 +51,18 @@ const Home = () => {
       <ThemeProvider theme={showCustomTheme ? LPtheme : defaultTheme}>
         <CssBaseline />
         <HeaderBar mode={mode} toggleColorMode={toggleColorMode} />
+
         <First />
         <Box sx={{ bgcolor: 'background.default' }}>
           {/* <Divider /> */}
           <Second />
-
+          <Divider />
           <LogoCollection />
           {/* <Features /> */}
-          <Highlights />
-          <Testimonials />
-          <Pricing />
+          <Divider />
+          <Three />
+          <Four />
+          <Five />
           <FAQ />
           <NowUse />
           <Divider />

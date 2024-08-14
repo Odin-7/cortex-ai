@@ -64,10 +64,10 @@ export default function Footer() {
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
             </Box>
             <Typography variant="body2" fontWeight={600} gutterBottom>
-              Cortex AI
+              <span className="cortex-font">Cortex AI</span>
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
-              Hi，我是你的全能 AI 助手。
+              <span className="cortex-font">Hi，我是你的全能 AI 助手。</span>
             </Typography>
             <Stack
               direction="row"
@@ -161,15 +161,6 @@ export default function Footer() {
         }}
       >
         <div>
-          {/* <Link color="text.secondary" href="#">
-            Privacy Policy
-          </Link>
-          <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
-            &nbsp;•&nbsp;
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Terms of Service
-          </Link> */}
           <Copyright />
         </div>
         <Stack

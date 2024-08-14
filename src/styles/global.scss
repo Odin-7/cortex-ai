@@ -1,7 +1,25 @@
 $global-font-family: 'Arial', sans-serif;
+
 $global-text-color: #333;
 
 body {
   font-family: $global-font-family;
   color: $global-text-color;
 }
+
+// 字体库
+@font-face {
+  font-family: 'Cortex-Font';
+  font-weight: 400;
+  src: url('../../public/fonts/Cortex-Font.woff2');
+  font-display: swap;
+}
+.cortex-font {
+  font-family: 'Cortex-Font';
+}
+
+// 颜色
+// 渐变： #4078fc  and  #7acbfe
+// 强调色：#9499fd
+// 按钮强调色： background: 'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)'
+// 背景：linear-gradient(180deg, #CEE5FD, #FFFFFF)

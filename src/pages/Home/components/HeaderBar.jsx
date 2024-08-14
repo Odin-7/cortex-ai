@@ -9,7 +9,7 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
-import MenuIcon from '@mui/icons-material/Menu';
+import SegmentOutlinedIcon from '@mui/icons-material/SegmentOutlined';
 import ToggleColorMode from './ToggleColorMode';
 
 const logoStyle = {
@@ -48,16 +48,8 @@ function HeaderBar({ mode, toggleColorMode }) {
           boxShadow: 0,
           bgcolor: 'transparent',
           backgroundImage: 'none',
-          pt: 1,
-          // bgcolor:
-          //   theme.palette.mode === 'light'
-          //     ? 'rgba(255, 255, 255, 0.4)'
-          //     : 'rgba(0, 0, 0, 0.4)',
+          pt: { xs: 0.2, md: 0.8 },
           backdropFilter: 'blur(24px)',
-          // boxShadow:
-          //   theme.palette.mode === 'light'
-          //     ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
-          //     : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
         })}
       >
         <Container maxWidth="lg">
@@ -69,6 +61,7 @@ function HeaderBar({ mode, toggleColorMode }) {
               justifyContent: 'space-between',
               flexShrink: 0,
               maxHeight: 40,
+              pr: 1,
             })}
           >
             <Box
@@ -83,7 +76,7 @@ function HeaderBar({ mode, toggleColorMode }) {
             >
               <img src="/logo.svg" style={logoStyle} alt="logo of cortex" />
               <Typography variant="subtitle2" color="text.primary">
-                Cortex AI
+                <span className="cortex-font">Cortex AI</span>
               </Typography>
             </Box>
             <Box
@@ -99,32 +92,32 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    介绍
+                    <span className="cortex-font">介绍</span>
                   </Typography>
                 </MenuItem>
 
                 <MenuItem
-                  onClick={() => scrollToSection('highlights')}
+                  onClick={() => scrollToSection('three')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    功能
+                    <span className="cortex-font">功能</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('testimonials')}
+                  onClick={() => scrollToSection('four')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    评价
+                    <span className="cortex-font">评价</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('pricing')}
+                  onClick={() => scrollToSection('five')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    开通
+                    <span className="cortex-font">开通</span>
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -132,7 +125,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    了解
+                    <span className="cortex-font">了解</span>
                   </Typography>
                 </MenuItem>
               </Box>
@@ -146,16 +139,6 @@ function HeaderBar({ mode, toggleColorMode }) {
                 target="_blank"
               >
                 登录
-              </Button>
-              <Button
-                color="primary"
-                variant="contained"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
-                target="_blank"
-              >
-                注册
               </Button> */}
             </Box>
             {/* 移动端 */}
@@ -167,7 +150,7 @@ function HeaderBar({ mode, toggleColorMode }) {
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: '30px', p: '4px' }}
               >
-                <MenuIcon />
+                <SegmentOutlinedIcon />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box
@@ -192,19 +175,19 @@ function HeaderBar({ mode, toggleColorMode }) {
                     />
                   </Box> */}
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    介绍
+                    <span className="cortex-font">介绍</span>
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    评价
+                  <MenuItem onClick={() => scrollToSection('four')}>
+                    <span className="cortex-font">评价</span>
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('highlights')}>
-                    功能
+                  <MenuItem onClick={() => scrollToSection('three')}>
+                    <span className="cortex-font">功能</span>
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection('pricing')}>
-                    开通
+                  <MenuItem onClick={() => scrollToSection('five')}>
+                    <span className="cortex-font">开通</span>
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('faq')}>
-                    了解
+                    <span className="cortex-font">了解</span>
                   </MenuItem>
                   <Divider />
                   {/* <MenuItem>
@@ -221,13 +204,17 @@ function HeaderBar({ mode, toggleColorMode }) {
                   </MenuItem> */}
                   <MenuItem>
                     <Button
-                      color="primary"
-                      variant="outlined"
                       component="a"
                       target="_blank"
-                      sx={{ width: '100%' }}
+                      sx={{
+                        width: '100%',
+                        borderWidth: 0,
+                        color: '#ffffff',
+                        background:
+                          'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
+                      }}
                     >
-                      登 录
+                      <span className="cortex-font">登 录</span>
                     </Button>
                   </MenuItem>
                 </Box>

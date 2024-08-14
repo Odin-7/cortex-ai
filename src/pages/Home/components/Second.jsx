@@ -12,7 +12,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useTheme } from '@mui/system';
 
 import LightVideo from '@/assets/video/light-video.mp4';
-import DarkVideo from '@/assets/video/dark-video.mp4';
+import DarkVideo from '@/assets/video/light-video.mp4';
 import LightVideoSource from '@/assets/images/light-video-source.png';
 import DarkVideoSource from '@/assets/images/dark-video-source.png';
 
@@ -36,7 +36,7 @@ export default function First() {
       id="features"
       sx={(theme) => ({
         width: '100%',
-        backgroundColor: '#0a0a0a',
+        // backgroundColor: '#0a0a0a',
         // backgroundImage:
         //   theme.palette.mode === 'light'
         //     ? 'linear-gradient(180deg, #CEE5FD, #FFF)'
@@ -55,7 +55,7 @@ export default function First() {
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          全能 AI 助手
+          <span className="cortex-font">全能 AI 助手</span>
         </Typography>
 
         {/* <Typography
@@ -79,9 +79,15 @@ export default function First() {
           onChange={handleChange}
           aria-label="Platform"
         >
-          <ToggleButton value="chat">多模型群聊</ToggleButton>
-          <ToggleButton value="code">AI编码大师</ToggleButton>
-          <ToggleButton value="voice">智能语音助手</ToggleButton>
+          <ToggleButton value="chat">
+            <span className="cortex-font">多模型群聊</span>
+          </ToggleButton>
+          <ToggleButton value="code">
+            <span className="cortex-font">AI 编码大师</span>
+          </ToggleButton>
+          <ToggleButton value="voice">
+            <span className="cortex-font">智能语音助手</span>
+          </ToggleButton>
         </ToggleButtonGroup>
         <Typography
           variant="body1"

@@ -1,3 +1,5 @@
+// 效果 - 滚动播放
+
 import React, { useState } from 'react';
 import './RollPlay.scss';
 
@@ -53,7 +55,7 @@ const TagList = () => {
   const [tags, setTags] = useState(shuffle(TAGS));
 
   return (
-    <div className="tag-list">
+    <div className="tag-list" style={{ position: 'relative' }}>
       {[...new Array(ROWS)].map((_, i) => (
         <InfiniteLoopSlider
           key={i}
@@ -65,7 +67,7 @@ const TagList = () => {
           ))}
         </InfiniteLoopSlider>
       ))}
-      <div className="fade" />
+      {/* <div className="fade" /> */}
     </div>
   );
 };

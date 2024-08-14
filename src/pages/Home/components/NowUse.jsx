@@ -28,7 +28,7 @@ export default function NowUse() {
         }}
       >
         <Typography component="h2" variant="h4">
-          立即体验 Cortex AI 的强大功能
+          <span className="cortex-font">立即体验 Cortex AI 的强大功能</span>
         </Typography>
         <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
           免费解锁AI编码大师、AI编码无需人类插手
@@ -37,11 +37,17 @@ export default function NowUse() {
 
       <Box sx={{ width: '100%', textAlign: 'center' }}>
         <Button
-          variant="contained"
-          color="primary"
           onClick={() => navigate('/dashboard')}
+          component="a"
+          target="_blank"
+          sx={{
+            width: { xs: '100%', md: '30%' },
+            borderWidth: 0,
+            color: '#ffffff',
+            background: 'linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%)',
+          }}
         >
-          启用 AI 原力
+          <span className="cortex-font">解锁 AI 原力</span>
         </Button>
       </Box>
     </Container>

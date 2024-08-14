@@ -38,7 +38,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        你想了解的
+        <span className="cortex-font">你想了解的</span>
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion

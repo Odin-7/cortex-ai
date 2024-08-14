@@ -70,7 +70,7 @@ const logoStyle = {
   padding: '0 5px',
 };
 
-export default function Pricing() {
+export default function Five() {
   const [alignment, setAlignment] = React.useState('web');
 
   const handleChange = (event, newAlignment) => {
@@ -78,7 +78,7 @@ export default function Pricing() {
   };
   return (
     <Container
-      id="pricing"
+      id="five"
       sx={{
         pt: { xs: 3, sm: 5 },
         pb: { xs: 8, sm: 10 },
@@ -106,7 +106,7 @@ export default function Pricing() {
             textAlign: { xs: 'center', sm: 'center', md: 'center' },
           }}
         >
-          开通
+          <span className="cortex-font">开通</span>
         </Typography>
         <Typography
           component="h2"
@@ -120,7 +120,7 @@ export default function Pricing() {
             justifyContent: 'center',
           }}
         >
-          支持
+          <span className="cortex-font">支持</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
             <img src={Chatgpt} style={logoStyle} alt="chatgpt" />
             <Typography
@@ -129,7 +129,7 @@ export default function Pricing() {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              GPT-4o
+              <span className="cortex-font">GPT-4o</span>
             </Typography>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -141,7 +141,7 @@ export default function Pricing() {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              Claude 3.5
+              <span className="cortex-font">Claude 3.5</span>
             </Typography>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -153,7 +153,7 @@ export default function Pricing() {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              Gemini 1.5
+              <span className="cortex-font">Gemini 1.5</span>
             </Typography>
           </div>
         </Typography>

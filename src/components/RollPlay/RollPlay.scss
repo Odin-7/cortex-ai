@@ -40,13 +40,12 @@
   gap: 0 0.2rem;
   color: #e2e8f0;
   font-size: 0.9rem;
-  // background-color: #334155;
+  background-color: #202020;
   border-radius: 0.4rem;
   padding: 0.3rem 1rem;
   margin-right: 1rem; // Must used margin-right instead of gap for the loop to be smooth
   box-shadow: 0 0.1rem 0.2rem rgb(0 0 0 / 20%), 0 0.1rem 0.5rem rgb(0 0 0 / 30%),
     0 0.2rem 1.5rem rgb(0 0 0 / 40%);
-
   span {
     font-size: 1.2rem;
     // color: #64748b;

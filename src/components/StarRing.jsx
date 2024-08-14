@@ -1,7 +1,10 @@
+// 效果 - 星环
+
 import React from 'react';
 
 const StarRingPage = {
-  backgroundColor: '#0a0a0a',
+  // backgroundColor: '#0a0a0a',
+  backgroundColor: '#191919',
   borderRadius: '100%',
   bottom: '-908px',
   boxShadow: 'inset 0 2px 20px #fff, 0 -10px 50px 1px #ffffff7d',
@@ -39,7 +42,7 @@ const StarRingPageMark = {
   zIndex: '-1',
 };
 const StarRingPageMarkLeft = {
-  background: 'linear-gradient( 90deg, #0a0a0a 0%, rgba(10, 10, 10, 0) 100% )',
+  background: 'linear-gradient( 90deg, #191919 0%, rgba(10, 10, 10, 0) 100% )',
   flex: '1 0 0px',
   height: '100%',
   overflow: 'hidden',
@@ -48,7 +51,7 @@ const StarRingPageMarkLeft = {
 };
 const StarRingPageMarkRight = {
   background:
-    'linear-gradient( 270deg, #0a0a0a 0%,  rgba(10, 10, 10, 0) 100% )',
+    'linear-gradient( 270deg, #191919 0%,  rgba(10, 10, 10, 0) 100% )',
   flex: '1 0 0px',
   height: '100%',
   overflow: 'hidden',

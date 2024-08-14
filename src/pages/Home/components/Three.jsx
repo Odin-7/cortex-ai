@@ -49,10 +49,10 @@ const items = [
   },
 ];
 
-export default function Highlights() {
+export default function Three() {
   return (
     <Box
-      id="highlights"
+      id="three"
       sx={{
         pt: { xs: 3, sm: 5 },
         pb: { xs: 8, sm: 10 },
@@ -76,7 +76,7 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            随处可用，随时可用
+            <span className="cortex-font">随处可用，随时可用</span>
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400', mt: 1 }}>
             你需要的功能，我们都有
